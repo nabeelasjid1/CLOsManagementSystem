@@ -1,0 +1,10 @@
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\bin\Debug\CLOs Management System.exe.config
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\bin\Debug\CLOs Management System.exe
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\bin\Debug\CLOs Management System.pdb
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs Management System.csprojResolveAssemblyReference.cache
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.Home.resources
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.Properties.Resources.resources
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs Management System.csproj.GenerateResource.Cache
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs Management System.exe
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs Management System.pdb
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.studentForm.resources
