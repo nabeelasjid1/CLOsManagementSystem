@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,10 @@ namespace CLOs_Management_System
 
         private void Home_Load(object sender, EventArgs e)
         {
+            string query = "Select count(*) from Student";
+            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+            int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
+            stdCount.Text = count.ToString();
 
         }
 
@@ -54,9 +59,9 @@ namespace CLOs_Management_System
 
         private void Students_Click(object sender, EventArgs e)
         {
-            
-            //Controls.Add(std);
-            //std.BringToFront();
+            StudentManage std = new StudentManage();
+            Controls.Add(std);
+            std.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,6 +70,11 @@ namespace CLOs_Management_System
         }
 
         private void BtnRubricsTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }

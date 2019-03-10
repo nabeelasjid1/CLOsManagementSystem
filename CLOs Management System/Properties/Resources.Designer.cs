@@ -163,6 +163,16 @@ namespace CLOs_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_72530 {
+            get {
+                object obj = ResourceManager.GetObject("img_72530", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img94joktmu78858 {
             get {
                 object obj = ResourceManager.GetObject("img94joktmu78858", resourceCulture);
