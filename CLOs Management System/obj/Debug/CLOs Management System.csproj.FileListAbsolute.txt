@@ -8,3 +8,5 @@ C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CL
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs Management System.exe
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs Management System.pdb
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.StudentManage.resources
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.CLOsManage.resources
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.Main.resources

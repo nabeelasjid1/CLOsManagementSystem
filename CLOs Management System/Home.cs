@@ -20,16 +20,17 @@ namespace CLOs_Management_System
 
         private void Home_Load(object sender, EventArgs e)
         {
-            string query = "Select count(*) from Student";
-            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
-            int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
-            stdCount.Text = count.ToString();
+            Main main = new Main();
+            Controls.Add(main);
+            main.BringToFront();
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            Main main = new Main();
+            Controls.Add(main);
+            main.BringToFront();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -66,7 +67,9 @@ namespace CLOs_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            CLOsManage clo = new CLOsManage();
+            Controls.Add(clo);
+            clo.BringToFront();
         }
 
         private void BtnRubricsTab_Click(object sender, EventArgs e)
