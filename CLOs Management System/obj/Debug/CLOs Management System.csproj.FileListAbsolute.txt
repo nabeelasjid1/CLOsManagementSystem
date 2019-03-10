@@ -10,3 +10,4 @@ C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CL
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.StudentManage.resources
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.CLOsManage.resources
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.Main.resources
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.Rubics.resources

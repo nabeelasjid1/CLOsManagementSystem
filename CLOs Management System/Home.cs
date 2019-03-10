@@ -74,10 +74,17 @@ namespace CLOs_Management_System
 
         private void BtnRubricsTab_Click(object sender, EventArgs e)
         {
-
+            Rubics rub = new Rubics();
+            Controls.Add(rub);
+            rub.BringToFront();
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
