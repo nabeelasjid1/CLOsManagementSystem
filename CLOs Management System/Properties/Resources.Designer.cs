@@ -63,6 +63,16 @@ namespace CLOs_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _103339 {
+            get {
+                object obj = ResourceManager.GetObject("103339", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1798373_thumb {
             get {
                 object obj = ResourceManager.GetObject("1798373_thumb", resourceCulture);
@@ -136,6 +146,26 @@ namespace CLOs_Management_System.Properties {
         internal static System.Drawing.Bitmap EIA {
             get {
                 object obj = ResourceManager.GetObject("EIA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Election_Result_icon {
+            get {
+                object obj = ResourceManager.GetObject("Election-Result-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exam_result_512 {
+            get {
+                object obj = ResourceManager.GetObject("exam_result-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
