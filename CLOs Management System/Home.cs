@@ -91,7 +91,9 @@ namespace CLOs_Management_System
 
         private void BtnAssessmentsTab_Click(object sender, EventArgs e)
         {
-
+            Assessment ass = new Assessment();
+            Controls.Add(ass);
+            ass.BringToFront();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
