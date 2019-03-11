@@ -90,7 +90,7 @@
             // 
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(138, 120);
+            this.btnSearch.Location = new System.Drawing.Point(714, 65);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(70, 23);
             this.btnSearch.TabIndex = 52;
@@ -101,7 +101,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel8.Location = new System.Drawing.Point(12, 138);
+            this.panel8.Location = new System.Drawing.Point(588, 83);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(120, 3);
             this.panel8.TabIndex = 50;
@@ -110,15 +110,18 @@
             // 
             this.grdStudent.BackgroundColor = System.Drawing.SystemColors.Window;
             this.grdStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdStudent.Location = new System.Drawing.Point(12, 173);
+            this.grdStudent.Location = new System.Drawing.Point(16, 108);
             this.grdStudent.Name = "grdStudent";
-            this.grdStudent.Size = new System.Drawing.Size(440, 266);
+            this.grdStudent.Size = new System.Drawing.Size(772, 331);
             this.grdStudent.TabIndex = 53;
             this.grdStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdStudent_CellContentClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.btnUpdateClo);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.btnDeleteClo);
             this.panel1.Controls.Add(this.btnSaveClo);
             this.panel1.Controls.Add(this.txtName);
@@ -132,7 +135,7 @@
             // txtSearch
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Location = new System.Drawing.Point(12, 125);
+            this.txtSearch.Location = new System.Drawing.Point(588, 70);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Search here.....";
             this.txtSearch.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
@@ -154,9 +157,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.grdStudent);
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(200, 60);
@@ -167,7 +167,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -100,5 +100,15 @@ namespace CLOs_Management_System
         {
 
         }
+
+        private void BtnAttendenceTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

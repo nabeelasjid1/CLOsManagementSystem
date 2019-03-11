@@ -225,6 +225,7 @@ namespace CLOs_Management_System
         }
         public void LoadRubric()
         {
+            cmbRubicName.Items.Clear();
             string query = "Select * from Rubric";
             SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
             SqlDataReader reader = sqlcmd.ExecuteReader();

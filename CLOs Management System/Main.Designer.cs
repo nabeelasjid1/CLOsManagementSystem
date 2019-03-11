@@ -32,33 +32,33 @@
             this.stdCount = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblAssCount = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cloCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,10 +104,20 @@
             this.panel7.Size = new System.Drawing.Size(84, 153);
             this.panel7.TabIndex = 4;
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::CLOs_Management_System.Properties.Resources.community_student_icon;
+            this.pictureBox11.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(54, 57);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 21;
+            this.pictureBox11.TabStop = false;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.lblAssCount);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Location = new System.Drawing.Point(487, 236);
@@ -115,16 +125,16 @@
             this.panel5.Size = new System.Drawing.Size(263, 153);
             this.panel5.TabIndex = 6;
             // 
-            // label7
+            // lblAssCount
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Elephant", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(71, 56);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 45);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "0";
+            this.lblAssCount.AutoSize = true;
+            this.lblAssCount.Font = new System.Drawing.Font("Elephant", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssCount.ForeColor = System.Drawing.Color.Black;
+            this.lblAssCount.Location = new System.Drawing.Point(71, 56);
+            this.lblAssCount.Name = "lblAssCount";
+            this.lblAssCount.Size = new System.Drawing.Size(47, 45);
+            this.lblAssCount.TabIndex = 6;
+            this.lblAssCount.Text = "0";
             // 
             // label4
             // 
@@ -145,6 +155,16 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(84, 153);
             this.panel10.TabIndex = 5;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::CLOs_Management_System.Properties.Resources.EIA;
+            this.pictureBox8.Location = new System.Drawing.Point(14, 56);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(54, 57);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 18;
+            this.pictureBox8.TabStop = false;
             // 
             // panel6
             // 
@@ -188,6 +208,16 @@
             this.panel9.Size = new System.Drawing.Size(84, 153);
             this.panel9.TabIndex = 5;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::CLOs_Management_System.Properties.Resources.google_reading_books_png_logo_13;
+            this.pictureBox10.Location = new System.Drawing.Point(14, 55);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(54, 57);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 20;
+            this.pictureBox10.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -230,36 +260,6 @@
             this.panel8.Size = new System.Drawing.Size(84, 153);
             this.panel8.TabIndex = 5;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::CLOs_Management_System.Properties.Resources.community_student_icon;
-            this.pictureBox11.Location = new System.Drawing.Point(13, 55);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(54, 57);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 21;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::CLOs_Management_System.Properties.Resources.EIA;
-            this.pictureBox8.Location = new System.Drawing.Point(14, 56);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(54, 57);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 18;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::CLOs_Management_System.Properties.Resources.google_reading_books_png_logo_13;
-            this.pictureBox10.Location = new System.Drawing.Point(14, 55);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(54, 57);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 20;
-            this.pictureBox10.TabStop = false;
-            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::CLOs_Management_System.Properties.Resources.tick_mark_png_icon_9;
@@ -286,18 +286,18 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
@@ -311,7 +311,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblAssCount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox8;

@@ -38,12 +38,30 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.grdAssessment = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbAssessmentId = new System.Windows.Forms.ComboBox();
+            this.lblASName = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.cmbRubricId = new System.Windows.Forms.ComboBox();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnUpdateASSC = new System.Windows.Forms.Button();
+            this.btnDeleteASSC = new System.Windows.Forms.Button();
+            this.btnSaveASSC = new System.Windows.Forms.Button();
+            this.btnSearchASSC = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.grdAssessmentAC = new System.Windows.Forms.DataGridView();
+            this.txtSearchASSC = new System.Windows.Forms.PlaceholderTextBox();
             this.txtSearchAss = new System.Windows.Forms.PlaceholderTextBox();
+            this.txtTotalMarksAC = new System.Windows.Forms.PlaceholderTextBox();
+            this.txtNameAC = new System.Windows.Forms.PlaceholderTextBox();
             this.txtTotalWeightage = new System.Windows.Forms.PlaceholderTextBox();
             this.txtTotalMarks = new System.Windows.Forms.PlaceholderTextBox();
             this.txtTitle = new System.Windows.Forms.PlaceholderTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdAssessment)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAssessmentAC)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUpdateAss
@@ -139,6 +157,19 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnUpdateASSC);
+            this.panel1.Controls.Add(this.cmbAssessmentId);
+            this.panel1.Controls.Add(this.btnDeleteASSC);
+            this.panel1.Controls.Add(this.btnSaveASSC);
+            this.panel1.Controls.Add(this.lblASName);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.cmbRubricId);
+            this.panel1.Controls.Add(this.lblStatus);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.txtTotalMarksAC);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.txtNameAC);
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.btnUpdateAss);
             this.panel1.Controls.Add(this.btnDeleteAss);
             this.panel1.Controls.Add(this.btnSaveAss);
@@ -154,6 +185,156 @@
             this.panel1.TabIndex = 49;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // cmbAssessmentId
+            // 
+            this.cmbAssessmentId.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbAssessmentId.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cmbAssessmentId.FormattingEnabled = true;
+            this.cmbAssessmentId.Location = new System.Drawing.Point(749, 20);
+            this.cmbAssessmentId.Name = "cmbAssessmentId";
+            this.cmbAssessmentId.Size = new System.Drawing.Size(47, 21);
+            this.cmbAssessmentId.TabIndex = 60;
+            // 
+            // lblASName
+            // 
+            this.lblASName.AutoSize = true;
+            this.lblASName.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblASName.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lblASName.Location = new System.Drawing.Point(699, 26);
+            this.lblASName.Name = "lblASName";
+            this.lblASName.Size = new System.Drawing.Size(53, 15);
+            this.lblASName.TabIndex = 58;
+            this.lblASName.Text = "AsName";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel9.Location = new System.Drawing.Point(749, 40);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(47, 3);
+            this.panel9.TabIndex = 59;
+            // 
+            // cmbRubricId
+            // 
+            this.cmbRubricId.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbRubricId.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cmbRubricId.FormattingEnabled = true;
+            this.cmbRubricId.Location = new System.Drawing.Point(549, 17);
+            this.cmbRubricId.Name = "cmbRubricId";
+            this.cmbRubricId.Size = new System.Drawing.Size(47, 21);
+            this.cmbRubricId.TabIndex = 57;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lblStatus.Location = new System.Drawing.Point(491, 23);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(62, 15);
+            this.lblStatus.TabIndex = 55;
+            this.lblStatus.Text = "RubName";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel2.Location = new System.Drawing.Point(549, 37);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(47, 3);
+            this.panel2.TabIndex = 56;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel5.Location = new System.Drawing.Point(613, 38);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(80, 3);
+            this.panel5.TabIndex = 53;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel6.Location = new System.Drawing.Point(405, 38);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(80, 3);
+            this.panel6.TabIndex = 49;
+            // 
+            // btnUpdateASSC
+            // 
+            this.btnUpdateASSC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateASSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateASSC.Location = new System.Drawing.Point(522, 62);
+            this.btnUpdateASSC.Name = "btnUpdateASSC";
+            this.btnUpdateASSC.Size = new System.Drawing.Size(100, 23);
+            this.btnUpdateASSC.TabIndex = 56;
+            this.btnUpdateASSC.Text = "Update";
+            this.btnUpdateASSC.UseVisualStyleBackColor = true;
+            this.btnUpdateASSC.Click += new System.EventHandler(this.btnUpdateASSC_Click);
+            // 
+            // btnDeleteASSC
+            // 
+            this.btnDeleteASSC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteASSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteASSC.Location = new System.Drawing.Point(632, 62);
+            this.btnDeleteASSC.Name = "btnDeleteASSC";
+            this.btnDeleteASSC.Size = new System.Drawing.Size(100, 23);
+            this.btnDeleteASSC.TabIndex = 55;
+            this.btnDeleteASSC.Text = "Delete AssesC";
+            this.btnDeleteASSC.UseVisualStyleBackColor = true;
+            this.btnDeleteASSC.Click += new System.EventHandler(this.btnDeleteASSC_Click);
+            // 
+            // btnSaveASSC
+            // 
+            this.btnSaveASSC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSaveASSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveASSC.Location = new System.Drawing.Point(413, 62);
+            this.btnSaveASSC.Name = "btnSaveASSC";
+            this.btnSaveASSC.Size = new System.Drawing.Size(100, 23);
+            this.btnSaveASSC.TabIndex = 54;
+            this.btnSaveASSC.Text = "Save AssesC";
+            this.btnSaveASSC.UseVisualStyleBackColor = true;
+            this.btnSaveASSC.Click += new System.EventHandler(this.btnStdSave_Click);
+            // 
+            // btnSearchASSC
+            // 
+            this.btnSearchASSC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchASSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchASSC.Location = new System.Drawing.Point(725, 122);
+            this.btnSearchASSC.Name = "btnSearchASSC";
+            this.btnSearchASSC.Size = new System.Drawing.Size(70, 23);
+            this.btnSearchASSC.TabIndex = 56;
+            this.btnSearchASSC.Text = "Search";
+            this.btnSearchASSC.UseVisualStyleBackColor = true;
+            this.btnSearchASSC.Click += new System.EventHandler(this.btnSearchASSC_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel10.Location = new System.Drawing.Point(599, 140);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(120, 3);
+            this.panel10.TabIndex = 54;
+            // 
+            // grdAssessmentAC
+            // 
+            this.grdAssessmentAC.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.grdAssessmentAC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdAssessmentAC.Location = new System.Drawing.Point(413, 174);
+            this.grdAssessmentAC.Name = "grdAssessmentAC";
+            this.grdAssessmentAC.Size = new System.Drawing.Size(371, 266);
+            this.grdAssessmentAC.TabIndex = 57;
+            this.grdAssessmentAC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAssessmentAC_CellClick);
+            // 
+            // txtSearchASSC
+            // 
+            this.txtSearchASSC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchASSC.Location = new System.Drawing.Point(599, 127);
+            this.txtSearchASSC.Name = "txtSearchASSC";
+            this.txtSearchASSC.PlaceholderText = "Search AssesC.....";
+            this.txtSearchASSC.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtSearchASSC.Size = new System.Drawing.Size(82, 13);
+            this.txtSearchASSC.TabIndex = 55;
+            // 
             // txtSearchAss
             // 
             this.txtSearchAss.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -163,6 +344,26 @@
             this.txtSearchAss.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtSearchAss.Size = new System.Drawing.Size(82, 13);
             this.txtSearchAss.TabIndex = 51;
+            // 
+            // txtTotalMarksAC
+            // 
+            this.txtTotalMarksAC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTotalMarksAC.Location = new System.Drawing.Point(613, 25);
+            this.txtTotalMarksAC.Name = "txtTotalMarksAC";
+            this.txtTotalMarksAC.PlaceholderText = "Total Marks";
+            this.txtTotalMarksAC.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtTotalMarksAC.Size = new System.Drawing.Size(82, 13);
+            this.txtTotalMarksAC.TabIndex = 54;
+            // 
+            // txtNameAC
+            // 
+            this.txtNameAC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNameAC.Location = new System.Drawing.Point(405, 25);
+            this.txtNameAC.Name = "txtNameAC";
+            this.txtNameAC.PlaceholderText = "Name";
+            this.txtNameAC.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtNameAC.Size = new System.Drawing.Size(82, 13);
+            this.txtNameAC.TabIndex = 50;
             // 
             // txtTotalWeightage
             // 
@@ -199,6 +400,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txtSearchASSC);
+            this.Controls.Add(this.btnSearchASSC);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.grdAssessmentAC);
             this.Controls.Add(this.txtSearchAss);
             this.Controls.Add(this.btnSearchAss);
             this.Controls.Add(this.panel8);
@@ -211,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdAssessment)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAssessmentAC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +438,22 @@
         private System.Windows.Forms.DataGridView grdAssessment;
         private System.Windows.Forms.PlaceholderTextBox txtTitle;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PlaceholderTextBox txtTotalMarksAC;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PlaceholderTextBox txtNameAC;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ComboBox cmbRubricId;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cmbAssessmentId;
+        private System.Windows.Forms.Label lblASName;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnUpdateASSC;
+        private System.Windows.Forms.Button btnDeleteASSC;
+        private System.Windows.Forms.Button btnSaveASSC;
+        private System.Windows.Forms.PlaceholderTextBox txtSearchASSC;
+        private System.Windows.Forms.Button btnSearchASSC;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.DataGridView grdAssessmentAC;
     }
 }

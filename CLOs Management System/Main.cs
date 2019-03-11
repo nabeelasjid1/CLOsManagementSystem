@@ -22,6 +22,7 @@ namespace CLOs_Management_System
         {
             LoadCountStd();
             LoadCountClo();
+            LoadCountAsses();
         }
         private void LoadCountStd()
         {
@@ -36,6 +37,13 @@ namespace CLOs_Management_System
             SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
             int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
             cloCount.Text = count.ToString();
+        }
+        private void LoadCountAsses()
+        {
+            string query = "Select count(*) from Assessment";
+            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+            int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
+            lblAssCount.Text = count.ToString();
         }
     }
 }
