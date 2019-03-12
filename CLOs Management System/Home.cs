@@ -103,7 +103,9 @@ namespace CLOs_Management_System
 
         private void BtnAttendenceTab_Click(object sender, EventArgs e)
         {
-
+            Attendence att = new Attendence();
+            Controls.Add(att);
+            att.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)

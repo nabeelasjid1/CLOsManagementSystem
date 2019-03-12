@@ -93,6 +93,16 @@ namespace CLOs_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _513ffd2d9c {
+            get {
+                object obj = ResourceManager.GetObject("513ffd2d9c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _874910_document_512x512 {
             get {
                 object obj = ResourceManager.GetObject("874910_document_512x512", resourceCulture);
@@ -106,6 +116,16 @@ namespace CLOs_Management_System.Properties {
         internal static System.Drawing.Bitmap community_student_icon {
             get {
                 object obj = ResourceManager.GetObject("community-student-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap compliance_png__1170x0_q85_subsampling_2_upscale {
+            get {
+                object obj = ResourceManager.GetObject("compliance.png__1170x0_q85_subsampling-2_upscale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +193,16 @@ namespace CLOs_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fb5b958f {
+            get {
+                object obj = ResourceManager.GetObject("fb5b958f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap google_reading_books_png_logo_13 {
             get {
                 object obj = ResourceManager.GetObject("google-reading-books-png-logo-13", resourceCulture);
@@ -226,6 +256,16 @@ namespace CLOs_Management_System.Properties {
         internal static System.Drawing.Bitmap open_book_icon_free_books_and_education_13 {
             get {
                 object obj = ResourceManager.GetObject("open-book-icon-free-books-and-education-13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap submit_button {
+            get {
+                object obj = ResourceManager.GetObject("submit_button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -52,6 +52,18 @@
     <Compile Include="Assessment.Designer.cs">
       <DependentUpon>Assessment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Attendence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Attendence.Designer.cs">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CheckStatus.Designer.cs">
+      <DependentUpon>CheckStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="CLOsManage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +83,12 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkAttendence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarkAttendence.Designer.cs">
+      <DependentUpon>MarkAttendence.cs</DependentUpon>
     </Compile>
     <Compile Include="PlaceholderTextBox.cs">
       <SubType>Component</SubType>
@@ -92,6 +110,12 @@
     <EmbeddedResource Include="Assessment.resx">
       <DependentUpon>Assessment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Attendence.resx">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckStatus.resx">
+      <DependentUpon>CheckStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CLOsManage.resx">
       <DependentUpon>CLOsManage.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkAttendence.resx">
+      <DependentUpon>MarkAttendence.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -192,6 +219,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Election-Result-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\513ffd2d9c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compliance.png__1170x0_q85_subsampling-2_upscale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fb5b958f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submit_button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

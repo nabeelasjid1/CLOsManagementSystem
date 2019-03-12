@@ -192,7 +192,7 @@ namespace CLOs_Management_System
                     "Contact = '" + txtContact.Text + "', " +
                     "Email = '" + txtEmail.Text + "', " +
                     "RegistrationNumber = '" + txtRegNumber.Text + "', " +
-                    "Status = '" + status() + "' " + " Where RegistrationNumber = '" + txtRegNumber.Text + "'";
+                    "Status = '" + status() + "' " + " Where Id = '" + StdId + "'";
                 string messege = txtFirstName.Text + " " + txtLastName.Text + " Updated Successfully";
                 crud(query, messege);
                 display_data();
