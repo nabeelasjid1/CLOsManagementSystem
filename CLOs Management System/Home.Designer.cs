@@ -35,7 +35,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEval = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.BtnAssessmentsTab = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -137,7 +137,7 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(40)))));
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnEval);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.BtnAssessmentsTab);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -156,19 +156,19 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button2
+            // btnEval
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(54, 441);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 57);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Results";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnEval.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEval.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEval.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEval.ForeColor = System.Drawing.Color.White;
+            this.btnEval.Location = new System.Drawing.Point(54, 441);
+            this.btnEval.Name = "btnEval";
+            this.btnEval.Size = new System.Drawing.Size(130, 57);
+            this.btnEval.TabIndex = 21;
+            this.btnEval.Text = "Evaluation";
+            this.btnEval.UseVisualStyleBackColor = true;
+            this.btnEval.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox8
             // 
@@ -363,7 +363,7 @@
         private System.Windows.Forms.Button BtnAssessmentsTab;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEval;
         private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

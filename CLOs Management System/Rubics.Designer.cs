@@ -40,25 +40,25 @@
             this.grdRub = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtValue = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.grdRubLvl = new System.Windows.Forms.DataGridView();
-            this.BtnSearchRubLvl = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnUpdateRubLvl = new System.Windows.Forms.Button();
-            this.btnDeleteRubLvl = new System.Windows.Forms.Button();
-            this.btnSaveLvl = new System.Windows.Forms.Button();
+            this.cmbLvl = new System.Windows.Forms.ComboBox();
+            this.Level = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtRubLvlD = new System.Windows.Forms.PlaceholderTextBox();
             this.cmbRubicName = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblRubicName = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cmbLvl = new System.Windows.Forms.ComboBox();
-            this.Level = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnUpdateRubLvl = new System.Windows.Forms.Button();
+            this.btnDeleteRubLvl = new System.Windows.Forms.Button();
+            this.btnSaveLvl = new System.Windows.Forms.Button();
+            this.txtValue = new System.Windows.Forms.TextBox();
+            this.txtDetails = new System.Windows.Forms.PlaceholderTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.grdRubLvl = new System.Windows.Forms.DataGridView();
+            this.BtnSearchRubLvl = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.txtSearchRubLvl = new System.Windows.Forms.PlaceholderTextBox();
             this.txtSearch = new System.Windows.Forms.PlaceholderTextBox();
-            this.txtRubLvlD = new System.Windows.Forms.PlaceholderTextBox();
-            this.txtDetails = new System.Windows.Forms.PlaceholderTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdRub)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdRubLvl)).BeginInit();
@@ -197,49 +197,87 @@
             this.panel1.TabIndex = 49;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // txtValue
+            // cmbLvl
             // 
-            this.txtValue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtValue.Location = new System.Drawing.Point(269, 4);
-            this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(100, 13);
-            this.txtValue.TabIndex = 49;
+            this.cmbLvl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbLvl.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cmbLvl.FormattingEnabled = true;
+            this.cmbLvl.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmbLvl.Location = new System.Drawing.Point(745, 26);
+            this.cmbLvl.Name = "cmbLvl";
+            this.cmbLvl.Size = new System.Drawing.Size(47, 21);
+            this.cmbLvl.TabIndex = 60;
             // 
-            // contextMenuStrip1
+            // Level
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.Level.AutoSize = true;
+            this.Level.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Level.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.Level.Location = new System.Drawing.Point(706, 32);
+            this.Level.Name = "Level";
+            this.Level.Size = new System.Drawing.Size(36, 15);
+            this.Level.TabIndex = 58;
+            this.Level.Text = "Level";
             // 
-            // grdRubLvl
+            // panel5
             // 
-            this.grdRubLvl.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.grdRubLvl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdRubLvl.Location = new System.Drawing.Point(383, 173);
-            this.grdRubLvl.Name = "grdRubLvl";
-            this.grdRubLvl.Size = new System.Drawing.Size(409, 266);
-            this.grdRubLvl.TabIndex = 57;
-            this.grdRubLvl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdRubLvl_CellClick);
-            this.grdRubLvl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdRubLvl_CellContentClick);
+            this.panel5.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel5.Location = new System.Drawing.Point(745, 46);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(47, 3);
+            this.panel5.TabIndex = 59;
             // 
-            // BtnSearchRubLvl
+            // txtRubLvlD
             // 
-            this.BtnSearchRubLvl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnSearchRubLvl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSearchRubLvl.Location = new System.Drawing.Point(714, 121);
-            this.BtnSearchRubLvl.Name = "BtnSearchRubLvl";
-            this.BtnSearchRubLvl.Size = new System.Drawing.Size(70, 23);
-            this.BtnSearchRubLvl.TabIndex = 56;
-            this.BtnSearchRubLvl.Text = "Search";
-            this.BtnSearchRubLvl.UseVisualStyleBackColor = true;
-            this.BtnSearchRubLvl.Click += new System.EventHandler(this.BtnSearchRubLvl_Click);
+            this.txtRubLvlD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRubLvlD.Location = new System.Drawing.Point(598, 31);
+            this.txtRubLvlD.Name = "txtRubLvlD";
+            this.txtRubLvlD.PlaceholderText = "Details";
+            this.txtRubLvlD.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtRubLvlD.Size = new System.Drawing.Size(82, 13);
+            this.txtRubLvlD.TabIndex = 57;
             // 
-            // panel2
+            // cmbRubicName
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(587, 139);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(120, 3);
-            this.panel2.TabIndex = 54;
+            this.cmbRubicName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbRubicName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.cmbRubicName.FormattingEnabled = true;
+            this.cmbRubicName.Location = new System.Drawing.Point(534, 26);
+            this.cmbRubicName.Name = "cmbRubicName";
+            this.cmbRubicName.Size = new System.Drawing.Size(47, 21);
+            this.cmbRubicName.TabIndex = 56;
+            this.cmbRubicName.SelectedIndexChanged += new System.EventHandler(this.cmbRubicName_SelectedIndexChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel3.Location = new System.Drawing.Point(598, 44);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(100, 3);
+            this.panel3.TabIndex = 54;
+            // 
+            // lblRubicName
+            // 
+            this.lblRubicName.AutoSize = true;
+            this.lblRubicName.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRubicName.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lblRubicName.Location = new System.Drawing.Point(449, 32);
+            this.lblRubicName.Name = "lblRubicName";
+            this.lblRubicName.Size = new System.Drawing.Size(79, 15);
+            this.lblRubicName.TabIndex = 53;
+            this.lblRubicName.Text = "Rubric Name";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panel4.Location = new System.Drawing.Point(534, 46);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(47, 3);
+            this.panel4.TabIndex = 55;
             // 
             // btnUpdateRubLvl
             // 
@@ -277,77 +315,59 @@
             this.btnSaveLvl.UseVisualStyleBackColor = true;
             this.btnSaveLvl.Click += new System.EventHandler(this.btnSaveLvl_Click);
             // 
-            // cmbRubicName
+            // txtValue
             // 
-            this.cmbRubicName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbRubicName.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.cmbRubicName.FormattingEnabled = true;
-            this.cmbRubicName.Location = new System.Drawing.Point(534, 26);
-            this.cmbRubicName.Name = "cmbRubicName";
-            this.cmbRubicName.Size = new System.Drawing.Size(47, 21);
-            this.cmbRubicName.TabIndex = 56;
-            this.cmbRubicName.SelectedIndexChanged += new System.EventHandler(this.cmbRubicName_SelectedIndexChanged);
+            this.txtValue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtValue.Location = new System.Drawing.Point(269, 4);
+            this.txtValue.Name = "txtValue";
+            this.txtValue.Size = new System.Drawing.Size(100, 13);
+            this.txtValue.TabIndex = 49;
             // 
-            // panel3
+            // txtDetails
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel3.Location = new System.Drawing.Point(598, 44);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(100, 3);
-            this.panel3.TabIndex = 54;
+            this.txtDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDetails.Location = new System.Drawing.Point(12, 28);
+            this.txtDetails.Name = "txtDetails";
+            this.txtDetails.PlaceholderText = "Details";
+            this.txtDetails.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
+            this.txtDetails.Size = new System.Drawing.Size(82, 13);
+            this.txtDetails.TabIndex = 39;
             // 
-            // lblRubicName
+            // contextMenuStrip1
             // 
-            this.lblRubicName.AutoSize = true;
-            this.lblRubicName.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRubicName.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.lblRubicName.Location = new System.Drawing.Point(463, 32);
-            this.lblRubicName.Name = "lblRubicName";
-            this.lblRubicName.Size = new System.Drawing.Size(74, 15);
-            this.lblRubicName.TabIndex = 53;
-            this.lblRubicName.Text = "Rubic Name";
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // panel4
+            // grdRubLvl
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel4.Location = new System.Drawing.Point(534, 46);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(47, 3);
-            this.panel4.TabIndex = 55;
+            this.grdRubLvl.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.grdRubLvl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdRubLvl.Location = new System.Drawing.Point(383, 173);
+            this.grdRubLvl.Name = "grdRubLvl";
+            this.grdRubLvl.Size = new System.Drawing.Size(409, 266);
+            this.grdRubLvl.TabIndex = 57;
+            this.grdRubLvl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdRubLvl_CellClick);
+            this.grdRubLvl.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdRubLvl_CellContentClick);
             // 
-            // cmbLvl
+            // BtnSearchRubLvl
             // 
-            this.cmbLvl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbLvl.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.cmbLvl.FormattingEnabled = true;
-            this.cmbLvl.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cmbLvl.Location = new System.Drawing.Point(745, 26);
-            this.cmbLvl.Name = "cmbLvl";
-            this.cmbLvl.Size = new System.Drawing.Size(47, 21);
-            this.cmbLvl.TabIndex = 60;
+            this.BtnSearchRubLvl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnSearchRubLvl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSearchRubLvl.Location = new System.Drawing.Point(714, 121);
+            this.BtnSearchRubLvl.Name = "BtnSearchRubLvl";
+            this.BtnSearchRubLvl.Size = new System.Drawing.Size(70, 23);
+            this.BtnSearchRubLvl.TabIndex = 56;
+            this.BtnSearchRubLvl.Text = "Search";
+            this.BtnSearchRubLvl.UseVisualStyleBackColor = true;
+            this.BtnSearchRubLvl.Click += new System.EventHandler(this.BtnSearchRubLvl_Click);
             // 
-            // Level
+            // panel2
             // 
-            this.Level.AutoSize = true;
-            this.Level.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Level.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.Level.Location = new System.Drawing.Point(706, 32);
-            this.Level.Name = "Level";
-            this.Level.Size = new System.Drawing.Size(36, 15);
-            this.Level.TabIndex = 58;
-            this.Level.Text = "Level";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panel5.Location = new System.Drawing.Point(745, 46);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(47, 3);
-            this.panel5.TabIndex = 59;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel2.Location = new System.Drawing.Point(587, 139);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(120, 3);
+            this.panel2.TabIndex = 54;
             // 
             // txtSearchRubLvl
             // 
@@ -368,26 +388,6 @@
             this.txtSearch.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
             this.txtSearch.Size = new System.Drawing.Size(82, 13);
             this.txtSearch.TabIndex = 51;
-            // 
-            // txtRubLvlD
-            // 
-            this.txtRubLvlD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRubLvlD.Location = new System.Drawing.Point(598, 31);
-            this.txtRubLvlD.Name = "txtRubLvlD";
-            this.txtRubLvlD.PlaceholderText = "Details";
-            this.txtRubLvlD.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtRubLvlD.Size = new System.Drawing.Size(82, 13);
-            this.txtRubLvlD.TabIndex = 57;
-            // 
-            // txtDetails
-            // 
-            this.txtDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDetails.Location = new System.Drawing.Point(12, 28);
-            this.txtDetails.Name = "txtDetails";
-            this.txtDetails.PlaceholderText = "Details";
-            this.txtDetails.PlaceholderTextColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtDetails.Size = new System.Drawing.Size(82, 13);
-            this.txtDetails.TabIndex = 39;
             // 
             // Rubics
             // 

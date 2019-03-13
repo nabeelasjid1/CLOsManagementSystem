@@ -110,7 +110,9 @@ namespace CLOs_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Evaluation eval = new Evaluation();
+            Controls.Add(eval);
+            eval.BringToFront();
         }
     }
 }

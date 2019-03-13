@@ -29,8 +29,10 @@ namespace CLOs_Management_System
         {
             try
             {
+                var myDateTime = DateTime.Now;
+                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
                 string query = "Insert Into Clo(Name, DateCreated, DateUpdated) " +
-                "Values('" + txtName.Text + "', '"+DateTime.Now+"', '"+DateTime.Now+"' )";
+                "Values('" + txtName.Text + "', '"+ sqlFormattedDate + "', '"+ sqlFormattedDate + "' )";
 
                 string messege = txtName.Text + " Added Successfully";
 
@@ -94,9 +96,10 @@ namespace CLOs_Management_System
         {
             if (txtName.Text != "")
             {
+                var myDateTime = DateTime.Now;
+                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
                 string query = "Update Clo Set Name = '" + txtName.Text + "', " +
-                    "DateCreated = '" + DateCreated + "', " +
-                    "DateUpdated = '" + DateTime.Now + "' " + " Where Id = '" + CloId + "'";
+                    "DateUpdated = '" + sqlFormattedDate + "' " + " Where Id = '" + CloId + "'";
                 string messege = txtName.Text +  " Updated Successfully";
                 crud(query, messege);
                 display_data();

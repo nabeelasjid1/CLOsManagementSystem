@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="Evaluation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Evaluation.Designer.cs">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CLOsManage.resx">
       <DependentUpon>CLOsManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluation.resx">
+      <DependentUpon>Evaluation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

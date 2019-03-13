@@ -15,3 +15,4 @@ C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CL
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.Attendence.resources
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.MarkAttendence.resources
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.CheckStatus.resources
+C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\CLOs Management System\CLOs Management System\obj\Debug\CLOs_Management_System.Evaluation.resources

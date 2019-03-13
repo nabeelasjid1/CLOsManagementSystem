@@ -29,8 +29,10 @@ namespace CLOs_Management_System
         {
             try
             {
+                var myDateTime = DateTime.Now;
+                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
                 string query = "Insert Into Assessment(Title, DateCreated, TotalMarks, TotalWeightage) " +
-                "Values('" + txtTitle.Text + "', '" + DateTime.Now + "', '" + txtTotalMarks.Text + "', '" + txtTotalWeightage.Text + "')";
+                "Values('" + txtTitle.Text + "', '" + sqlFormattedDate + "', '" + txtTotalMarks.Text + "', '" + txtTotalWeightage.Text + "')";
 
                 string messege = txtTitle.Text + " Added Successfully";
 
@@ -208,8 +210,10 @@ namespace CLOs_Management_System
         {
             try
             {
+                var myDateTime = DateTime.Now;
+                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
                 string query = "Insert Into AssessmentComponent(Name, RubricId, TotalMarks,DateCreated,DateUpdated, AssessmentId) " +
-                "Values('" + txtNameAC.Text + "', '" + getRubId(cmbRubricId.Text) + "', '" + txtTotalMarksAC.Text + "', '" + DateTime.Now + "', '" + DateTime.Now + "', '" + getAssId(cmbAssessmentId.Text) + "')";
+                "Values('" + txtNameAC.Text + "', '" + getRubId(cmbRubricId.Text) + "', '" + txtTotalMarksAC.Text + "', '" + sqlFormattedDate + "', '" + sqlFormattedDate + "', '" + getAssId(cmbAssessmentId.Text) + "')";
 
                 string messege = txtNameAC.Text + " Added Successfully";
 
@@ -306,10 +310,12 @@ namespace CLOs_Management_System
         {
             if (txtNameAC.Text != "")
             {
+                var myDateTime = DateTime.Now;
+                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
                 string query = "Update AssessmentComponent Set Name = '" + txtNameAC.Text + "', " +
                     "RubricId = '" + getRubId(cmbRubricId.Text) + "', " +
                     "TotalMarks = '" + txtTotalMarksAC.Text + "', " +
-                    "DateUpdated = '" + DateTime.Now + "', " +
+                    "DateUpdated = '" + sqlFormattedDate + "', " +
                     "AssessmentId = '" + getAssId(cmbAssessmentId.Text) + "' " + " Where Id = '" + AssCId + "'";
                 string messege = txtTitle.Text + " Updated Successfully";
                 crud(query, messege);
