@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace CLOs_Management_System
 {
@@ -27,30 +28,51 @@ namespace CLOs_Management_System
 
         private void btnSaveAss_Click(object sender, EventArgs e)
         {
-            try
+            lblValid1.Hide();
+            lblValid2.Hide();
+            lblValid3.Hide();
+            if(AsTitleValid() == 0 || AsTotalMarksValid() == 0 || AsTotalWeightValid() == 0)
             {
-                var myDateTime = DateTime.Now;
-                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
-                string query = "Insert Into Assessment(Title, DateCreated, TotalMarks, TotalWeightage) " +
-                "Values('" + txtTitle.Text + "', '" + sqlFormattedDate + "', '" + txtTotalMarks.Text + "', '" + txtTotalWeightage.Text + "')";
-
-                string messege = txtTitle.Text + " Added Successfully";
-
-                crud(query, messege);
-                display_data();
-                clear();
-                fillCmbAssesId();
+                AsTitleValid();
+                AsTotalMarksValid();
+                AsTotalWeightValid();
+                MessageBox.Show("Enter Valid Data");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    var myDateTime = DateTime.Now;
+                    var sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+                    string query = "Insert Into Assessment(Title, DateCreated, TotalMarks, TotalWeightage) " +
+                    "Values('" + txtTitle.Text + "', '" + sqlFormattedDate + "', '" + txtTotalMarks.Text + "', '" + txtTotalWeightage.Text + "')";
+
+                    string messege = txtTitle.Text + " Added Successfully";
+
+                    crud(query, messege);
+                    display_data();
+                    clear();
+                    fillCmbAssesId();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+            
         }
         private void crud(string query, string messege)
         {
             SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
             sqlcmd.ExecuteNonQuery();
             MessageBox.Show(messege);
+            clear();
+            DatabaseConnection.getInstance().closeConnection();
+        }
+        private void crud1(string query)
+        {
+            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+            sqlcmd.ExecuteNonQuery();
             clear();
             DatabaseConnection.getInstance().closeConnection();
         }
@@ -106,6 +128,13 @@ namespace CLOs_Management_System
         private void Assessment_Load(object sender, EventArgs e)
         {
             display_data();
+            lblValid1.Hide();
+            lblValid2.Hide();
+            lblValid3.Hide();
+            lblValid4.Hide();
+            lblValid5.Hide();
+            lblValid6.Hide();
+            lblValid7.Hide();
             display_data1();
             fillCmbRubricId();
             fillCmbAssesId();
@@ -128,18 +157,27 @@ namespace CLOs_Management_System
         public void fillCmbAssesId()
         {
             cmbAssessmentId.Items.Clear();
-            string query = "Select * from Assessment";
-            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
-            SqlDataReader reader = sqlcmd.ExecuteReader();
-            while (reader.Read())
+            string query1 = "Select Count(*) from Assessment";
+            SqlCommand sqlcmd1 = new SqlCommand(query1, DatabaseConnection.getInstance().getConnection());
+            Int32 count = (Int32)sqlcmd1.ExecuteScalar();
+            if(count > 0)
             {
-                cmbAssessmentId.Items.Add(reader["Title"].ToString());
+                string query = "Select * from Assessment";
+                SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+                SqlDataReader reader = sqlcmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbAssessmentId.Items.Add(reader["Title"].ToString());
+                }
             }
+
+            
             DatabaseConnection.getInstance().closeConnection();
         }
         DateTime date;
         private void grdAssessment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnSaveAss.Enabled = false;
             AssId = Convert.ToInt32(grdAssessment.CurrentRow.Cells[0].Value.ToString());
             txtTitle.Text = grdAssessment.CurrentRow.Cells[1].Value.ToString();
             date = Convert.ToDateTime(grdAssessment.CurrentRow.Cells[2].Value.ToString());
@@ -153,12 +191,17 @@ namespace CLOs_Management_System
         {
             try
             {
-                if (txtTitle.Text != "")
+                if (AssId != -1)
                 {
                     string query = "Delete Assessment Where Id = '" + AssId + "'";
+                    string query1 = "Delete AssessmentComponent From AssessmentComponent Inner Join Assessment ON Assessment.Id = AssessmentComponent.AssessmentId where Assessment.Id = '" + AssId + "'";
                     string messege = txtTitle.Text + " Deleted Successfully";
+                    crud1(query1);
                     crud(query, messege);
                     display_data();
+                    display_data1();
+                    btnDeleteAss.Hide();
+                    btnUpdateAss.Hide();
                     clear();
                     fillCmbAssesId();
                 }
@@ -176,22 +219,38 @@ namespace CLOs_Management_System
 
         private void btnUpdateAss_Click(object sender, EventArgs e)
         {
-            if (txtTitle.Text != "")
+            lblValid1.Hide();
+            lblValid2.Hide();
+            lblValid3.Hide();
+            if (AsTitleValid() == 0 || AsTotalMarksValid() == 0 || AsTotalWeightValid() == 0)
             {
-                string query = "Update Assessment Set Title = '" + txtTitle.Text + "', " +
-                    "DateCreated = '" + date + "', " +
-                    "TotalMarks = '" + txtTotalMarks.Text + "', " +
-                    "TotalWeightage = '" + txtTotalWeightage.Text + "' " + " Where Id = '" + AssId + "'";
-                string messege = txtTitle.Text + " Updated Successfully";
-                crud(query, messege);
-                display_data();
-                fillCmbAssesId();
-                clear();
+                AsTitleValid();
+                AsTotalMarksValid();
+                AsTotalWeightValid();
+                MessageBox.Show("Enter Valid Data");
             }
             else
             {
-                MessageBox.Show("Required Fields are Empty");
+                if (AssId != -1)
+                {
+                    string query = "Update Assessment Set Title = '" + txtTitle.Text + "', " +
+                        "TotalMarks = '" + txtTotalMarks.Text + "', " +
+                        "TotalWeightage = '" + txtTotalWeightage.Text + "' " + " Where Id = '" + AssId + "'";
+                    string messege = txtTitle.Text + " Updated Successfully";
+                    crud(query, messege);
+                    display_data();
+                    display_data1();
+                    btnDeleteAss.Hide();
+                    btnUpdateAss.Hide();
+                    fillCmbAssesId();
+                    clear();
+                }
+                else
+                {
+                    MessageBox.Show("Required Fields are Empty");
+                }
             }
+            
         }
 
         private void btnSearchAss_Click(object sender, EventArgs e)
@@ -208,24 +267,40 @@ namespace CLOs_Management_System
 
         private void btnStdSave_Click(object sender, EventArgs e)
         {
-            try
+            lblValid4.Hide();
+            lblValid5.Hide();
+            lblValid6.Hide();
+            lblValid7.Hide();
+            if (ASCAsIdValid() == 0 || ASCNameValid() == 0 || ASCTotalMarksValid() == 0 || ASCRubicValid() == 0)
             {
-                var myDateTime = DateTime.Now;
-                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
-                string query = "Insert Into AssessmentComponent(Name, RubricId, TotalMarks,DateCreated,DateUpdated, AssessmentId) " +
-                "Values('" + txtNameAC.Text + "', '" + getRubId(cmbRubricId.Text) + "', '" + txtTotalMarksAC.Text + "', '" + sqlFormattedDate + "', '" + sqlFormattedDate + "', '" + getAssId(cmbAssessmentId.Text) + "')";
-
-                string messege = txtNameAC.Text + " Added Successfully";
-
-                crud(query, messege);
-                display_data1();
-                clear1();
-                //fillCmbAssesId();
+                ASCAsIdValid();
+                ASCNameValid();
+                ASCTotalMarksValid();
+                ASCRubicValid();
+                MessageBox.Show("Enter Valid Data");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    var myDateTime = DateTime.Now;
+                    var sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+                    string query = "Insert Into AssessmentComponent(Name, RubricId, TotalMarks,DateCreated,DateUpdated, AssessmentId) " +
+                    "Values('" + txtNameAC.Text + "', '" + getRubId(cmbRubricId.Text) + "', '" + txtTotalMarksAC.Text + "', '" + sqlFormattedDate + "', '" + sqlFormattedDate + "', '" + getAssId(cmbAssessmentId.Text) + "')";
+
+                    string messege = txtNameAC.Text + " Added Successfully";
+
+                    crud(query, messege);
+                    display_data1();
+                    clear1();
+                    //fillCmbAssesId();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+            
         }
         public int getRubId(string str)
         {
@@ -266,6 +341,7 @@ namespace CLOs_Management_System
 
         private void grdAssessmentAC_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnSaveASSC.Enabled = false;
             AssCId = Convert.ToInt32(grdAssessmentAC.CurrentRow.Cells[0].Value.ToString());
             txtNameAC.Text = grdAssessmentAC.CurrentRow.Cells[1].Value.ToString();
             int RubDet = Convert.ToInt32(grdAssessmentAC.CurrentRow.Cells[2].Value.ToString());
@@ -284,9 +360,14 @@ namespace CLOs_Management_System
                 if (txtNameAC.Text != "")
                 {
                     string query = "Delete AssessmentComponent Where Id = '" + AssCId + "'";
+                    string query1 = "Delete StudentResult From StudentResult Inner Join AssessmentComponent ON AssessmentComponent.Id = StudentResult.AssessmentComponentId where AssessmentComponent.Id = '" + AssCId + "'";
                     string messege = txtNameAC.Text + " Deleted Successfully";
+                    crud1(query1);
                     crud(query, messege);
                     display_data1();
+                    btnUpdateASSC.Hide();
+                    btnDeleteASSC.Hide();
+                    btnSaveASSC.Enabled = true;
                     clear1();
                     //fillCmbAssesId();
                 }
@@ -308,25 +389,44 @@ namespace CLOs_Management_System
 
         private void btnUpdateASSC_Click(object sender, EventArgs e)
         {
-            if (txtNameAC.Text != "")
+            lblValid4.Hide();
+            lblValid5.Hide();
+            lblValid6.Hide();
+            lblValid7.Hide();
+            if (ASCAsIdValid() == 0 || ASCNameValid() == 0 || ASCTotalMarksValid() == 0 || ASCRubicValid() == 0)
             {
-                var myDateTime = DateTime.Now;
-                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
-                string query = "Update AssessmentComponent Set Name = '" + txtNameAC.Text + "', " +
-                    "RubricId = '" + getRubId(cmbRubricId.Text) + "', " +
-                    "TotalMarks = '" + txtTotalMarksAC.Text + "', " +
-                    "DateUpdated = '" + sqlFormattedDate + "', " +
-                    "AssessmentId = '" + getAssId(cmbAssessmentId.Text) + "' " + " Where Id = '" + AssCId + "'";
-                string messege = txtTitle.Text + " Updated Successfully";
-                crud(query, messege);
-                display_data1();
-                //fillCmbAssesId();
-                clear1();
+                ASCAsIdValid();
+                ASCNameValid();
+                ASCTotalMarksValid();
+                ASCRubicValid();
+                MessageBox.Show("Enter Valid Data");
             }
             else
             {
-                MessageBox.Show("Required Fields are Empty");
+                if (AssCId != -1)
+                {
+                    var myDateTime = DateTime.Now;
+                    var sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+                    string query = "Update AssessmentComponent Set Name = '" + txtNameAC.Text + "', " +
+                        "RubricId = '" + getRubId(cmbRubricId.Text) + "', " +
+                        "TotalMarks = '" + txtTotalMarksAC.Text + "', " +
+                        "DateUpdated = '" + sqlFormattedDate + "', " +
+                        "AssessmentId = '" + getAssId(cmbAssessmentId.Text) + "' " + " Where Id = '" + AssCId + "'";
+                    string messege = txtTitle.Text + " Updated Successfully";
+                    crud(query, messege);
+                    display_data1();
+                    btnUpdateASSC.Hide();
+                    btnDeleteASSC.Hide();
+                    btnSaveASSC.Enabled = true;
+                    //fillCmbAssesId();
+                    clear1();
+                }
+                else
+                {
+                    MessageBox.Show("Required Fields are Empty");
+                }
             }
+            
         }
 
         private void btnSearchASSC_Click(object sender, EventArgs e)
@@ -339,6 +439,90 @@ namespace CLOs_Management_System
             da.Fill(dt);
             grdAssessmentAC.DataSource = dt;
             DatabaseConnection.getInstance().closeConnection();
+        }
+        public int AsTitleValid()
+        {
+            if ((!Regex.IsMatch(txtTitle.Text, @"^[a-zA-Z ]+$")) || txtTitle.Text == "")
+            {
+                lblValid1.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int ASCNameValid()
+        {
+            if ((!Regex.IsMatch(txtNameAC.Text, @"^[a-zA-Z ]+$")) || txtNameAC.Text == "")
+            {
+                lblValid4.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int ASCRubicValid()
+        {
+            if (cmbRubricId.Text == "")
+            {
+                lblValid5.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int ASCAsIdValid()
+        {
+            if (cmbAssessmentId.Text == "")
+            {
+                lblValid7.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int AsTotalMarksValid()
+        {
+            if ((!Regex.IsMatch(txtTotalMarks.Text, @"^[0-9]+$")) || txtTotalMarks.Text == "")
+            {
+                lblValid2.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int ASCTotalMarksValid()
+        {
+            if ((!Regex.IsMatch(txtTotalMarksAC.Text, @"^[0-9]+$")) || txtTotalMarksAC.Text == "")
+            {
+                lblValid6.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int AsTotalWeightValid()
+        {
+            if ((!Regex.IsMatch(txtTotalWeightage.Text, @"^[0-9]+$")) || txtTotalWeightage.Text == "")
+            {
+                lblValid3.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }

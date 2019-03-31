@@ -44,7 +44,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblEvalCount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -221,7 +221,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.lblEvalCount);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Location = new System.Drawing.Point(51, 236);
@@ -229,16 +229,16 @@
             this.panel3.Size = new System.Drawing.Size(263, 153);
             this.panel3.TabIndex = 4;
             // 
-            // label8
+            // lblEvalCount
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Elephant", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(61, 56);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 45);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "0";
+            this.lblEvalCount.AutoSize = true;
+            this.lblEvalCount.Font = new System.Drawing.Font("Elephant", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvalCount.ForeColor = System.Drawing.Color.Black;
+            this.lblEvalCount.Location = new System.Drawing.Point(61, 56);
+            this.lblEvalCount.Name = "lblEvalCount";
+            this.lblEvalCount.Size = new System.Drawing.Size(47, 45);
+            this.lblEvalCount.TabIndex = 7;
+            this.lblEvalCount.Text = "0";
             // 
             // label5
             // 
@@ -321,7 +321,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblEvalCount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox9;

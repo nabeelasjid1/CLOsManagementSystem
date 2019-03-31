@@ -113,6 +113,16 @@ namespace CLOs_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap classicon {
+            get {
+                object obj = ResourceManager.GetObject("classicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap community_student_icon {
             get {
                 object obj = ResourceManager.GetObject("community-student-icon", resourceCulture);

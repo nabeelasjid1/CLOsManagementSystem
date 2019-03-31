@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace CLOs_Management_System
 {
@@ -32,23 +33,35 @@ namespace CLOs_Management_System
         }
         private void btnRubSave_Click(object sender, EventArgs e)
         {
-            
-            try
+            lblValid1.Hide();
+            lblValid2.Hide();
+            if (RDetailsValid() == 0 || RCloIds() == 0)
             {
-                int k = Convert.ToInt32(txtValue.Text) ;
-                string query = "Insert Into Rubric(Id,Details, CloId) " +
-                "Values('" + k + "', '" + txtDetails.Text + "', '" + getId(cmbCloName.Text) + "' )";
+                RDetailsValid();
+                RCloIds();
+                MessageBox.Show("Enter Valid Values");
+            }
+            else
+            {
+                try
+                {
+                    int k = Convert.ToInt32(txtValue.Text);
+                    string query = "Insert Into Rubric(Id,Details, CloId) " +
+                    "Values('" + k + "', '" + txtDetails.Text + "', '" + getId(cmbCloName.Text) + "' )";
 
-                string messege = "Rubric Added Successfully Against" + cmbCloName.Text;
-                txtValue.Text = (Convert.ToInt32(txtValue.Text) + 1).ToString();
-                crud(query, messege);
-                display_data();
-                LoadRubric();
+                    string messege = "Rubric Added Successfully Against " + cmbCloName.Text;
+                    txtValue.Text = (Convert.ToInt32(txtValue.Text) + 1).ToString();
+                    crud(query, messege);
+                    display_data();
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            LoadRubric();
+
         }
         public void display_data()
         {
@@ -97,6 +110,13 @@ namespace CLOs_Management_System
             clear();
             DatabaseConnection.getInstance().closeConnection();
         }
+        private void crud1(string query)
+        {
+            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+            sqlcmd.ExecuteNonQuery();
+            clear();
+            DatabaseConnection.getInstance().closeConnection();
+        }
         private void clear()
         {
             txtDetails.Text = cmbCloName.Text = "";
@@ -128,11 +148,32 @@ namespace CLOs_Management_System
 
         private void Rubics_Load(object sender, EventArgs e)
         {
-            string query = "Select MAX(Id) from Rubric";
-            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
-            int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
-            txtValue.Text = (count+1).ToString();
+            cmbRubicName.Items.Clear();
+            string query1 = "Select Count(*) from Rubric";
+            SqlCommand sqlcmd1 = new SqlCommand(query1, DatabaseConnection.getInstance().getConnection());
+            Int32 count = (Int32)sqlcmd1.ExecuteScalar();
+            if(count > 0)
+            {
+                string query = "Select MAX(Id) from Rubric";
+                SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+                int count1 = Convert.ToInt32(sqlcmd.ExecuteScalar());
+                if (count1 > 0)
+                {
+                    txtValue.Text = (count1 + 1).ToString();
+                }
+            }
+            else
+            {
+                txtValue.Text = (1).ToString();
+            }
+            DatabaseConnection.getInstance().closeConnection();
+            LoadRubric();
             txtValue.Hide();
+            lblValid1.Hide();
+            lblValid2.Hide();
+            lblValid3.Hide();
+            lblValid4.Hide();
+            lblValid5.Hide();
             btnDeleteRub.Hide();
             btnUpdateRub.Hide();
             btnDeleteRubLvl.Hide();
@@ -143,6 +184,7 @@ namespace CLOs_Management_System
 
         private void grdRub_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnRubSave.Enabled = false;
             RubId = Convert.ToInt32(grdRub.CurrentRow.Cells[0].Value.ToString());
             txtDetails.Text = grdRub.CurrentRow.Cells[1].Value.ToString();
             //string str = grdRub.CurrentRow.Cells[2].Value.ToString();
@@ -162,20 +204,36 @@ namespace CLOs_Management_System
 
         private void btnUpdateRub_Click(object sender, EventArgs e)
         {
-            int k = Convert.ToInt32(txtValue.Text);
-            if (txtDetails.Text != "")
+            lblValid1.Hide();
+            lblValid2.Hide();
+            if (RDetailsValid() == 0 || RCloIds() == 0)
             {
-                string query = "Update Rubric Set Details = '" + txtDetails.Text + "', " +
-                    "CloId = '" + getId(cmbCloName.Text) +  "' " + " Where Id = '" + RubId + "'";
-                string messege = "Rubric Added Successfully Against" + cmbCloName.Text;
-                crud(query, messege);
-                display_data();
-                LoadRubric();
+                RDetailsValid();
+                RCloIds();
+                MessageBox.Show("Enter Valid Values");
             }
             else
             {
-                MessageBox.Show("Required Fields are Empty");
+                int k = Convert.ToInt32(txtValue.Text);
+                if (txtDetails.Text != "")
+                {
+                    string query = "Update Rubric Set Details = '" + txtDetails.Text + "', " +
+                        "CloId = '" + getId(cmbCloName.Text) + "' " + " Where Id = '" + RubId + "'";
+                    string messege = "Rubric Added Successfully Against " + cmbCloName.Text;
+                    crud(query, messege);
+                    btnRubSave.Enabled = true;
+                    display_data();
+                    display_data1();
+                    btnUpdateRub.Hide();
+                    btnDeleteRub.Hide();
+                    LoadRubric();
+                }
+                else
+                {
+                    MessageBox.Show("Required Fields are Empty");
+                }
             }
+            
         }
 
         private void btnDeleteRub_Click(object sender, EventArgs e)
@@ -185,9 +243,19 @@ namespace CLOs_Management_System
                 if (txtDetails.Text != "")
                 {
                     string query = "Delete Rubric Where Id = '" + RubId + "'";
+                    string query1 = "Delete RubricLevel From RubricLevel Inner Join Rubric ON RubricLevel.RubricId = Rubric.Id Where Rubric.Id = '" + RubId + "'";
+                    string query3 = "Delete AssessmentComponent From AssessmentComponent Inner Join Rubric ON AssessmentComponent.RubricId = Rubric.Id Where Rubric.Id = '" + RubId + "'";
+                    string query2 = "Delete StudentResult from StudentResult Inner Join RubricLevel ON StudentResult.RubricMeasurementId = RubricLevel.Id Inner Join Rubric ON Rubric.Id = RubricLevel.Id where Rubric.Id = '" + RubId + "'";
                     string messege = "Rubric against "+cmbCloName.Text + " Deleted Successfully";
+                    crud1(query2);
+                    crud1(query3);
+                    crud1(query1);
+                    btnUpdateRub.Hide();
+                    btnDeleteRub.Hide();
                     crud(query, messege);
                     display_data();
+                    display_data1();
+                    btnRubSave.Enabled = true;
                     LoadRubric();
                 }
                 else
@@ -226,35 +294,56 @@ namespace CLOs_Management_System
         public void LoadRubric()
         {
             cmbRubicName.Items.Clear();
-            string query = "Select * from Rubric";
-            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
-            SqlDataReader reader = sqlcmd.ExecuteReader();
-            while (reader.Read())
+            string query1 = "Select Count(*) from Rubric";
+            SqlCommand sqlcmd1 = new SqlCommand(query1, DatabaseConnection.getInstance().getConnection());
+            Int32 count =(Int32)sqlcmd1.ExecuteScalar();
+            if(count > 0)
             {
-                cmbRubicName.Items.Add(reader["Details"].ToString());
+                string query = "Select * from Rubric";
+                SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+                SqlDataReader reader = sqlcmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbRubicName.Items.Add(reader["Details"].ToString());
+                }
+                
             }
             DatabaseConnection.getInstance().closeConnection();
         }
 
         private void btnSaveLvl_Click(object sender, EventArgs e)
         {
-            try
+            lblValid3.Hide();
+            lblValid4.Hide();
+            lblValid5.Hide();
+            if (RubIdValid() == 0 || RLDetailsValid() == 0 || RubLvlValid() == 0)
             {
-                //int k = Convert.ToInt32(txtValue.Text);
-                string query = "Insert Into RubricLevel(RubricId,Details, MeasurementLevel) " +
-                "Values('" + getRubId(cmbRubicName.Text) + "', '" + txtRubLvlD.Text + "', '" + cmbLvl.Text + "' )";
+                RubIdValid();
+                RLDetailsValid();
+                RubLvlValid();
+                MessageBox.Show("Enter Valid Values");
+            }
+            else
+            {
+                try
+                {
+                    //int k = Convert.ToInt32(txtValue.Text);
+                    string query = "Insert Into RubricLevel(RubricId,Details, MeasurementLevel) " +
+                    "Values('" + getRubId(cmbRubicName.Text) + "', '" + txtRubLvlD.Text + "', '" + cmbLvl.Text + "' )";
 
-                string messege = "Rubric Level Added Successfully";
-                //txtValue.Text = (Convert.ToInt32(txtValue.Text) + 1).ToString();
-                crud(query, messege);
-                display_data1();
-                clear1();
-                //LoadRubric();
+                    string messege = "Rubric Level Added Successfully";
+                    //txtValue.Text = (Convert.ToInt32(txtValue.Text) + 1).ToString();
+                    crud(query, messege);
+                    display_data1();
+                    clear1();
+                    //LoadRubric();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
         public int getRubId(string str)
         {
@@ -278,9 +367,14 @@ namespace CLOs_Management_System
                 if (txtRubLvlD.Text != "")
                 {
                     string query = "Delete RubricLevel Where Id = '" + RubLvlId + "'";
+                    string query1 = "Delete StudentResult from StudentResult Inner Join RubricLevel ON StudentResult.RubricMeasurementId = RubricLevel.Id where RubricLevel.Id = '" + RubLvlId + "'";
                     string messege = "RubricLevel Deleted Successfully";
+                    crud1(query1);
                     crud(query, messege);
                     display_data1();
+                    btnUpdateRubLvl.Hide();
+                    btnDeleteRubLvl.Hide();
+                    btnSaveLvl.Enabled = true;
                     clear1();
                     //LoadRubric();
                 }
@@ -299,24 +393,42 @@ namespace CLOs_Management_System
         private void btnUpdateRubLvl_Click(object sender, EventArgs e)
         {
             //int k = Convert.ToInt32(txtValue.Text);
-            if (txtRubLvlD.Text != "")
+            lblValid3.Hide();
+            lblValid4.Hide();
+            lblValid5.Hide();
+            if (RubIdValid() == 0 || RLDetailsValid() == 0 || RubLvlValid() == 0)
             {
-                string query = "Update RubricLevel Set RubricId = '" + getRubId(cmbRubicName.Text) + "', " +
-                    "Details = '" + txtRubLvlD.Text + "', " +
-                    "MeasurementLevel = '" + cmbLvl.Text + "' " + " Where Id = '" + RubLvlId + "'";
-                string messege = "Rubric Added Successfully Against" + cmbCloName.Text;
-                crud(query, messege);
-                display_data1();
-                clear1();
+                RubIdValid();
+                RLDetailsValid();
+                RubLvlValid();
+                MessageBox.Show("Enter Valid Values");
             }
             else
             {
-                MessageBox.Show("Required Fields are Empty");
+                if (RubLvlId != -1)
+                {
+                    string query = "Update RubricLevel Set RubricId = '" + getRubId(cmbRubicName.Text) + "', " +
+                        "Details = '" + txtRubLvlD.Text + "', " +
+                        "MeasurementLevel = '" + cmbLvl.Text + "' " + " Where Id = '" + RubLvlId + "'";
+                    string messege = "Rubric Added Successfully Against" + cmbCloName.Text;
+                    crud(query, messege);
+                    btnSaveLvl.Enabled = true;
+                    display_data1();
+                    btnUpdateRubLvl.Hide();
+                    btnDeleteRubLvl.Hide();
+                    clear1();
+                }
+                else
+                {
+                    MessageBox.Show("Required Fields are Empty");
+                }
             }
+           
         }
 
         private void grdRubLvl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnSaveLvl.Enabled = false;
             RubLvlId = Convert.ToInt32(grdRubLvl.CurrentRow.Cells[0].Value.ToString());
             cmbRubicName.Text = grdRubLvl.CurrentRow.Cells[1].Value.ToString();
             //string str = grdRub.CurrentRow.Cells[2].Value.ToString();
@@ -337,6 +449,66 @@ namespace CLOs_Management_System
             da.Fill(dt);
             grdRubLvl.DataSource = dt;
             DatabaseConnection.getInstance().closeConnection();
+        }
+        public int RDetailsValid()
+        {
+            if ((!Regex.IsMatch(txtDetails.Text, @"^[a-zA-Z ]+$")) || txtDetails.Text == "")
+            {
+                lblValid1.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int RLDetailsValid()
+        {
+            if ((!Regex.IsMatch(txtRubLvlD.Text, @"^[a-zA-Z ]+$")) || txtRubLvlD.Text == "")
+            {
+                lblValid4.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int RCloIds()
+        {
+            if (cmbCloName.Text == "")
+            {
+                lblValid1.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int RubIdValid()
+        {
+            if (cmbRubicName.Text == "")
+            {
+                lblValid3.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        public int RubLvlValid()
+        {
+            if (cmbLvl.Text == "")
+            {
+                lblValid5.Show();
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 }

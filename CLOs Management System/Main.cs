@@ -23,6 +23,7 @@ namespace CLOs_Management_System
             LoadCountStd();
             LoadCountClo();
             LoadCountAsses();
+            LoadEvaluation();
         }
         private void LoadCountStd()
         {
@@ -44,6 +45,13 @@ namespace CLOs_Management_System
             SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
             int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
             lblAssCount.Text = count.ToString();
+        }
+        private void LoadEvaluation()
+        {
+            string query = "Select count(*) from StudentResult";
+            SqlCommand sqlcmd = new SqlCommand(query, DatabaseConnection.getInstance().getConnection());
+            int count = Convert.ToInt32(sqlcmd.ExecuteScalar());
+            lblEvalCount.Text = count.ToString();
         }
     }
 }
