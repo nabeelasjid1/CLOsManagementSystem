@@ -82,3 +82,48 @@ C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\13-03-2019Error Removed\C
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\13-03-2019Error Removed\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.sign.xml
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\13-03-2019Error Removed\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.styledxmlparser.xml
 C:\Users\Nabeel\Desktop\DBMS Lab Project\project Files\13-03-2019Error Removed\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.svg.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\CLOs Management System.exe.config
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs Management System.exe
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs Management System.pdb
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\CLOs Management System.exe
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\CLOs Management System.pdb
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\Common.Logging.Core.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\Common.Logging.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.barcodes.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.forms.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.io.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.kernel.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.layout.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.pdfa.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.sign.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.styledxmlparser.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.svg.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itextsharp.dll
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\Common.Logging.pdb
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\Common.Logging.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\Common.Logging.Core.pdb
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\Common.Logging.Core.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.barcodes.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.forms.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.io.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.kernel.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.layout.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.pdfa.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.sign.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.styledxmlparser.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\bin\Debug\itext.svg.xml
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs Management System.csprojResolveAssemblyReference.cache
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.Assessment.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.Attendence.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.CheckStatus.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.CLOsManage.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.Evaluation.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.Home.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.Main.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.MarkAttendence.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.Properties.Resources.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.Rubics.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs_Management_System.StudentManage.resources
+C:\Users\Nabeel\Desktop\Semester 6 Labs\DBMS Lab Project\project Files\Submited2\CLOsManagementSystem\CLOs Management System\obj\Debug\CLOs Management System.csproj.GenerateResource.Cache
